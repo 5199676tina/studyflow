@@ -5,12 +5,12 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![LocalStorage](https://img.shields.io/badge/LocalStorage-ff9800?style=for-the-badge)](#)
 
-# 專案簡介
+## 專案簡介
 
 StudyFlow 是一個學習效率管理系統，幫助使用者管理學習任務、專注時間以及學習統計。
 本專案使用 JavaScript 開發，並結合 UI / UX 設計思考，打造一個簡單且高效率的學習管理工具。
 
-# 專案特色
+## 專案特色
 
 StudyFlow 是專為學生與自學者設計的學習效率工具，提供：
 
@@ -26,45 +26,45 @@ StudyFlow 是專為學生與自學者設計的學習效率工具，提供：
 - 前端專案結構設計
 - UI / UX 設計思考
 
-# 核心功能
+## 核心功能
 
-## Task Management
+### Task Management
 
 - 新增學習任務
 - 編輯任務
 - 刪除任務
 - 標記完成
 
-## Pomodoro Timer
+### Pomodoro Timer
 
 - 25分鐘專注計時
 - 5分鐘休息提醒
 - 自動記錄專注時間
 
-## Learning Statistics
+### Learning Statistics
 
 - 顯示每日完成任務數
 - 統計每週學習進度
 
-## Dashboard
+### Dashboard
 
 - 今日任務列表
 - 今日學習時間顯示
 - 本週學習統計概覽
 
-# 技術架構
+## 技術架構
 
-## Frontend
+### Frontend
 
 - HTML5
 - CSS3
 - JavaScript (ES6)
 
-## Data Storage
+### Data Storage
 
 - LocalStorage
 
-# 專案架構
+## 專案架構
 
 ```
 studyflow/
@@ -91,7 +91,7 @@ studyflow/
 └── .gitattributes           # GitHub 程式語言統計設定
 ```
 
-# 安裝與執行
+## 安裝與執行
 
 1. Clone repository
 
@@ -108,7 +108,7 @@ cd studyflow
 3. 開啟專案
    直接使用瀏覽器開啟 index.html 即可開始使用，無需額外安裝套件或啟動伺服器。
 
-# 瀏覽器相容性
+## 瀏覽器相容性
 
 建議使用以下瀏覽器的最新版本以獲得最佳體驗：
 
