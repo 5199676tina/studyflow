@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyFlow | 學習效率管理工具</title>
+    <meta name="description" content="StudyFlow 是一個輕量級學習效率管理工具，整合任務管理、番茄鐘與學習統計，幫助你專注完成每天的學習目標。">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="StudyFlow 學習效率管理工具">
+    <meta property="og:description" content="專注學習．高效管理">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-white shadow">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 class="text-xl font-bold">StudyFlow</h1>
+
+            <nav class="space-x-4">
+                <a href="dashboard.html" class="text-blue-600 hover:underline">儀錶板</a>
+                <a href="tasks.html" class="text-blue-600 hover:underline">任務管理</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto py-20 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">
+            專注學習 · 高效管理
+        </h2>
+
+        <p class="text-lg text-gray-600 mb-10">
+            這是一個輕量級學習效率管理工具，
+            整合任務管理、番茄鐘與學習統計，
+            幫助您專注完成每天的學習目標。
+        </p>
+
+        <div class="space-x-4">
+            <a href="dashboard.html"
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition-colors duration-200">
+                進入儀錶板
+            </a>
+
+            <a href="tasks.html"
+                class="bg-gray-200 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors duration-200">
+                任務管理
+            </a>
+        </div>
+    </section>
+
+    <!-- sections -->
+    <section class="bg-white py-16">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+
+            <!-- section 1 -->
+            <div class="p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow duration-200">
+                <h3 class="text-xl font-semibold mb-3">任務管理</h3>
+                <p class="text-gray-600">
+                    建立每日學習任務，輕鬆追蹤進度。
+                </p>
+            </div>
+
+            <!-- section 2 -->
+            <div class="p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow duration-200">
+                <h3 class="text-xl font-semibold mb-3">番茄鐘專注</h3>
+                <p class="text-gray-600">
+                    使用番茄時鐘提升專注力。
+                </p>
+            </div>
+
+            <!-- section 3 -->
+            <div class="p-6 rounded-lg shadow-sm border hover:shadow-md transition-shadow duration-200">
+                <h3 class="text-xl font-semibold mb-3">學習統計</h3>
+                <p class="text-gray-600">
+                    查看完成任務數量與學習成果。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-6 text-sm">
+        © <span id="year">2026</span> StudyFlow 學習效率管理工具. 版權所有.
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+# 自動偵測文字檔並統一換行符號為 LF，避免跨系統（Windows/Mac）協作時
+# 每次 commit 都出現整檔案換行符號變更的無意義 diff
+* text=auto eol=lf
+
+# 明確指定原始碼檔案為文字檔
+*.html text
+*.css  text
+*.js   text
+*.json text
+*.md   text
+*.svg  text
+
+# 圖片與字型視為二進位檔，不做換行符號轉換，避免檔案損毀
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+
+# GitHub 語言統計（Linguist）設定：
+# 排除文件與設定檔，避免拉低 HTML/CSS/JS 的佔比
+README.md linguist-documentation
+*.md      linguist-documentation
+.gitattributes linguist-generated=false

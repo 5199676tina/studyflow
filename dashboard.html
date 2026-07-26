@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>儀錶板 | StudyFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <header class="bg-white shadow">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 class="text-xl font-bold">StudyFlow</h1>
+            <nav class="space-x-4">
+                <a href="index.html" class="text-blue-600 hover:underline">首頁</a>
+                <a href="dashboard.html" class="text-blue-600 font-semibold hover:underline">儀錶板</a>
+                <a href="tasks.html" class="text-blue-600 hover:underline">任務管理</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto space-y-6 p-6">
+        <!-- 今日任務 -->
+        <section class="bg-white p-6 rounded shadow space-y-4">
+            <h2 class="text-xl font-semibold">今日任務</h2>
+
+            <!-- 新增任務 -->
+            <div class="flex space-x-2">
+                <input id="taskInput" type="text" placeholder="輸入今天要完成的任務..."
+                    class="flex-1 border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                <button id="addTaskBtn"
+                    class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200">
+                    新增
+                </button>
+            </div>
+
+            <ul id="taskList" class="list-disc pl-6 space-y-2"></ul>
+        </section>
+
+        <!-- 番茄鐘 -->
+        <section class="bg-white p-6 rounded shadow space-y-4">
+            <h2 class="text-xl font-semibold">番茄鐘</h2>
+            <p id="timerMode" class="text-center text-sm text-gray-500" aria-live="polite">專注時間</p>
+            <p id="timer" class="text-4xl font-mono text-center" aria-live="polite">25:00</p>
+            <div class="flex space-x-4 justify-center">
+                <button id="startBtn"
+                    class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors duration-200">開始</button>
+                <button id="pauseBtn"
+                    class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition-colors duration-200">暫停</button>
+                <button id="resetBtn"
+                    class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors duration-200">重置</button>
+            </div>
+        </section>
+
+        <!-- 學習統計 -->
+        <section class="bg-white p-6 rounded shadow space-y-4">
+            <h2 class="text-xl font-semibold">學習統計</h2>
+            <div class="grid sm:grid-cols-3 gap-4 text-center">
+                <div>
+                    <p class="text-sm text-gray-500">完成任務數</p>
+                    <p id="completedTasks" class="text-2xl font-bold" aria-live="polite">0</p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500">今日學習時間</p>
+                    <p id="todayFocusTime" class="text-2xl font-bold" aria-live="polite">0 分鐘</p>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500">本週學習時間</p>
+                    <p id="weeklyFocusTime" class="text-2xl font-bold" aria-live="polite">0 分鐘</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 依相依順序載入：工具 → 任務邏輯 → 番茄鐘 → 統計 -->
+    <script src="js/utils/storage.js"></script>
+    <script src="js/modules/taskManager.js"></script>
+    <script src="js/modules/pomodoroTimer.js"></script>
+    <script src="js/analytics/statistics.js"></script>
+</body>
+
+</html>

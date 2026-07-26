@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任務管理 | StudyFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <header class="bg-white shadow">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 class="text-xl font-bold">StudyFlow</h1>
+            <nav class="space-x-4">
+                <a href="index.html" class="text-blue-600 hover:underline">首頁</a>
+                <a href="dashboard.html" class="text-blue-600 hover:underline">儀錶板</a>
+                <a href="tasks.html" class="text-blue-600 font-semibold hover:underline">任務管理</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto space-y-6 p-6">
+        <section class="bg-white p-6 rounded shadow space-y-4">
+            <h2 class="text-xl font-semibold">任務清單</h2>
+
+            <div class="flex space-x-2">
+                <input id="taskInput" type="text" placeholder="新增任務..."
+                    class="flex-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                <button id="addTaskBtn"
+                    class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200">
+                    新增
+                </button>
+            </div>
+
+            <ul id="taskList" class="space-y-2 pl-6"></ul>
+        </section>
+    </main>
+
+    <!-- 依相依順序載入：工具 → 任務邏輯 -->
+    <script src="js/utils/storage.js"></script>
+    <script src="js/modules/taskManager.js"></script>
+</body>
+
+</html>

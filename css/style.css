@@ -1,0 +1,22 @@
+/* 引入 Noto Sans，確保 font-family 真的能生效 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  background: #f5f5f5;
+}
+
+/* 任務容器：改用 max-width + 響應式寬度，避免手機被撐寬 */
+.task-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* 明確的鍵盤 focus 樣式，補齊無障礙可及性 */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
