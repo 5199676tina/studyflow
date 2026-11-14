@@ -100,7 +100,7 @@ studyflow/
 1. Clone repository
 
 ```
-git clone https://github.com/tina5199676/studyflow.git
+git clone https://github.com/5199676tina/studyflow.git
 ```
 
 2. 進入專案
